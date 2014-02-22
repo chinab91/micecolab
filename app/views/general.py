@@ -1,17 +1,30 @@
-from flask import jsonify, Blueprint, render_template
+from flask import jsonify, Blueprint, render_template, url_for, redirect, session
 from app import db
 import datetime, time
 #from app.models import (Attendee_Login, Attendee_Profile, Attendee_Match, Event_Info, Timestamp_Lookout
 
 mod = Blueprint('general', __name__)
 
-@mod.route('/')
+@mod.route('/<passcode_string>')
+def check_passcode(passcode_string):
+    passcode_file = open('app/views/passcode.txt')
+    passcode = passcode_file.readline()
+    if passcode_string != "":
+        return "404"
+    else:
+        session["access"] = True
+        return redirect(url_for('general.index')) # pending return template
+
+@mod.route('/index')
 def index():
-    return render_template('index.html')
+    if session["access"]:
+        return render_template('index.html')
+    else:
+        return "Sorry no access"
 
 @mod.route('/get_meetings')
 def get_meetings():
-	json_date = {
+    json_date = {
   "date": [
     {
       "value": "21 Feb 2014",
@@ -87,33 +100,25 @@ def get_meetings():
   ]
 }
 
-	return jsonify(json_date)
+    return jsonify(json_date)
 
 def get_cell_status(year, month, date, hour, min, sec):
-	dt = datetime.datetime(year, month, date, hour, min, sec)
-	unixts = time.mktime(dt.timetuple())
+    dt = datetime.datetime(year, month, date, hour, min, sec)
+    unixts = time.mktime(dt.timetuple())
 
-	currentdt = datetime.datetime.now()
-	currentunixts = time.mktime(currentdt.timetuple())
+    currentdt = datetime.datetime.now()
+    currentunixts = time.mktime(currentdt.timetuple())
 
-	if(unixts > currentunixts):
-		return 1
-	else:
-		return 0
+    if(unixts > currentunixts):
+        return 1
+    else:
+        return 0
 
-@mod.route('/passcode_check/<passcode_string>')
-def check_passcode(passcode_string):
-	passcode_file = open('app/views/passcode.txt')
-	passcode = passcode_file.readline()
-	if passcode_string != passcode:
-		return 0 # pending retrun template
-	else:
-		return 1 # pending return template
 
 
 @mod.route('/discover')
 def discover_recommendation():
-	json_data = {
+    json_data = {
   "date": [
       
         {
@@ -148,4 +153,4 @@ def discover_recommendation():
         }
   ]
 }
-	return jsonify(json_data)
+    return jsonify(json_data)
