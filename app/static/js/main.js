@@ -23,7 +23,7 @@ $(document).ready(function() {
 	  dataType: "json",
 	}).done(function(mm) {
 			$.each(mm.activity, function( k, a ) {
-				console.log(k);
+				$('#hn'+k+'').prepend('<b>'+a.time+'</b>');
 			});
 	});
 	
@@ -39,5 +39,15 @@ $(document).ready(function() {
 				$('#meetinglist').addClass('inactive');
 			});
 		}
+	});
+	
+	$('#searching').keyup(function() {
+		var searchid = $(this).val();
+			$.ajax({
+			  url: "/search/"+searchid+"",
+			  dataType: "json",
+			}).done(function(mm) {
+				
+			});
 	});
 });
