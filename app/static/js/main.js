@@ -47,7 +47,11 @@ $(document).ready(function() {
 			  url: "/search/"+searchid+"",
 			  dataType: "json",
 			}).done(function(mm) {
-				
+				//tofill
 			});
+	});
+	
+	$('td').click(function() {
+		$('#searching').val(''+$(this).find('span').text()+'').keyup();
 	});
 });

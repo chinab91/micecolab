@@ -228,3 +228,7 @@ padding:0px;
 .panel-title{
 font-size:14px;
 }
+
+td {
+cursor:pointer;
+}
