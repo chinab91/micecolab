@@ -1,6 +1,7 @@
 from flask import jsonify, Blueprint, render_template, url_for, redirect, session
 from app import db
 import datetime, time
+import arrow
 #from app.models import (Attendee_Login, Attendee_Profile, Attendee_Match, Event_Info, Timestamp_Lookout
 
 mod = Blueprint('general', __name__)
@@ -156,4 +157,21 @@ def discover_recommendation():
   ]
 }
 	return jsonify(json_data)
-	
+
+
+@mod.route('/activity')
+def activity():
+  json_data = {
+ "activity": [
+   {
+     "time": "%s " % arrow.now().replace(minutes=15).format('HH:mm')
+   },
+   {
+     "time": "%s " % arrow.now().replace(minutes=30).format('HH:mm')
+   },
+   {
+     "time": "%s " % arrow.now().replace(minutes=30).format('HH:mm')
+   }
+ ]
+}
+  return jsonify(json_data)
