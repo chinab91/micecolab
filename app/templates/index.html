@@ -65,10 +65,13 @@
     <div id="content">
         
 	<div id="panlm" class="panl">
+	<div id="meetingtab" class="row"><div class="col-xs-8"><h3 style="padding-left:5px;">My Meetings</h3></div><div class="col-xs-4 c"><h3><span class="glyphicon glyphicon-plus"></span></h3></div></div>
+	<div id="meetinglist" class="inactive"></div>
 	</div>
         
     </div>   
     <div id="button">
+		<div class="headerimg row">
 		<div class="col-xs-2"><label for="handler-left" id="left" href="#"><img src="{{ url_for('static', filename='img/concierge.png') }}"></label></div>
 		<div class="col-xs-10">
 		<div class="input-group inputsearch">
@@ -77,6 +80,7 @@
 			<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
 		  </span>
 		</div><!-- /input-group -->
+		</div>
 		</div>
 	</div>
 </div>
