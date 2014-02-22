@@ -121,7 +121,7 @@ margin-bottom:20px;
   float: right;
 }
 #wrapper #content {
-  padding: 140px 10px 0px 10px;
+  padding: 120px 10px 20px 10px;
   color: #666;
   line-height: 1.5em;
   font-size: .9em;
@@ -145,6 +145,7 @@ margin-bottom:20px;
 .panl {
 	background-color:white;
 	padding:15px 10px;
+	margin-top:10px;
 }
 
 .c {
@@ -168,3 +169,46 @@ margin-bottom:20px;
 	position:absolute;
 	bottom:10px;
 	}
+	
+table,th,td
+{
+border:4px solid white;
+}
+
+#panlr {
+padding-left:0px;
+padding-right:0px;
+padding-bottom:0px;
+}
+
+#rec_1 {
+  background: url(../img/rec_lmg.png) no-repeat center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+  
+#rec_2 {
+  background: url(../img/rec_mec.png) no-repeat center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+  
+#rec_3 {
+  background: url(../img/rec_fer.png) no-repeat center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+  
+#rec_4 {
+  background: url(../img/rec_mas.jpg) no-repeat center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
