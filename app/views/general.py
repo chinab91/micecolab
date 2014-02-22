@@ -9,3 +9,43 @@ def check_passcode(passcode_string):
 		return "wrong passcode" # pending retrun template
 	else:
 		return "right passcode" # pending return template
+
+
+@mod.route('/discover')
+def discover_recommendation():
+	json_data = {
+  "date": [
+      
+        {
+          "name": "Errol Lim",
+          "position": "CMO",
+          "company": "Jublia",
+          "location": "Table 2"
+        },
+        {
+          "name": "Andriano",
+          "position": "Lead Dev",
+          "company": "eBay",
+          "location": "E34"
+        },
+        {
+          "name": "Andriano",
+          "position": "Lead Dev",
+          "company": "eBay",
+          "location": "E34"
+        },
+        {
+          "name": "Andriano",
+          "position": "Lead Dev",
+          "company": "eBay",
+          "location": "E34"
+        },
+        {
+          "name": "Andriano",
+          "position": "Lead Dev",
+          "company": "eBay",
+          "location": "E34"
+        }
+  ]
+}
+	return jsonify(json_data)
