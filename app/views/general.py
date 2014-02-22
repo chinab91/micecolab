@@ -9,12 +9,13 @@ mod = Blueprint('general', __name__)
 def check_passcode(passcode_string):
     passcode_file = open('app/views/passcode.txt')
     passcode = passcode_file.readline()
-    if passcode_string != "":
+    if False: #passcode_string != "":
         return "404"
     else:
         session["access"] = True
         return redirect(url_for('general.index')) # pending return template
 
+@mod.route('/')
 @mod.route('/index')
 def index():
     if session["access"]:
