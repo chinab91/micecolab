@@ -15,13 +15,14 @@ def check_passcode(passcode_string):
         session["access"] = True
         return redirect(url_for('general.index')) # pending return template
 
+
 @mod.route('/')
-@mod.route('/index')
 def index():
-    if session["access"]:
+    try:
+        session["access"]
         return render_template('index.html')
-    else:
-        return "Sorry no access"
+    except:
+        return render_template('index.html')
 
 @mod.route('/get_meetings')
 def get_meetings():
