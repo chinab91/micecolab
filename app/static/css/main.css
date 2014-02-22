@@ -7,6 +7,10 @@ html, body {
   overflow: hidden;
 }
 
+label {
+margin-bottom:0px;
+}
+
 #menu, #favorites {
   position: fixed;
   top: 0;
@@ -89,7 +93,7 @@ html, body {
   position:fixed;
   width:100%;
   padding: 5px;
-  background: #eee;
+  background: #ffffff;
   line-height: 20px;
 }
 #wrapper #button label {
@@ -105,7 +109,7 @@ html, body {
   float: right;
 }
 #wrapper #content {
-  padding: 10px;
+  padding: 40px 20px;
   color: #666;
   line-height: 1.5em;
   font-size: .9em;
@@ -120,4 +124,13 @@ html, body {
 }
 #wrapper #content p:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.inputsearch {
+	padding-top:8px;
+}
+
+.panl {
+	background-color:white;
+	padding:15px 10px;
 }
