@@ -86,8 +86,9 @@ html, body {
   -moz-transition: -moz-transform 0.5s ease-in-out;
 }
 #wrapper #button {
-  height: 20px;
-  padding: 10px;
+  position:fixed;
+  width:100%;
+  padding: 5px;
   background: #eee;
   line-height: 20px;
 }
