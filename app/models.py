@@ -3,7 +3,6 @@ import flask.ext.whooshalchemy as whooshalchemy
 
 class Exhibitor_Profile(db.Model):
     __tablename__ = 'exhibitor_profile'
-    
     __searchable__ = ['location']
 
     id_exhibitor_profile = db.Column(db.Integer, primary_key=True)
