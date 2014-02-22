@@ -18,6 +18,15 @@ $(document).ready(function() {
 			});
 	});
 	
+	$.ajax({
+	  url: "/activity",
+	  dataType: "json",
+	}).done(function(mm) {
+			$.each(mm.activity, function( k, a ) {
+				console.log(k);
+			});
+	});
+	
 	$('#meetingtab').click(function() {
 		if ($('#meetinglist').hasClass('inactive') === true) {
 		$('#meetingtab1').addClass('glyphicon-minus').removeClass('glyphicon-plus');
