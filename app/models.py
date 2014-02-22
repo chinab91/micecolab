@@ -1,15 +1,9 @@
-from app import db, login_serializer
-from sqlalchemy.dialects.mysql import MEDIUMINT, SMALLINT, TIMESTAMP, TINYINT, TEXT
-from flask.ext.security import UserMixin  # dependecies required : Flask-Security
-from werkzeug.security import check_password_hash  # password hashing function, no dependencies required
-#TODO: put default values, load from sql schema
-#TODO: support tinyint, small text, etc. data types
-from flask import json, jsonify
-""" for natural language processing """
-import nltk
-""" re for regular expression """
-import re
-""" for sets in python """
-from sets import Set
-""" operator for sorting dictionary by value """
-import operator
+from app import db
+
+class Exhibitor_Profile(db.Model):
+    __tablename__ = 'exhibitor_profile'
+    id_exhibitor_profile = db.Column(db.Integer, primary_key=True)
+    fullname = db.Column(db.String(100))
+    companyname = db.Column(db.String(100))
+    position = db.Column(db.String(100))
+    location = db.Column(db.String(100))

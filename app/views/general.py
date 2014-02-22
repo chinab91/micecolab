@@ -114,7 +114,7 @@ def check_passcode(passcode_string):
 @mod.route('/discover')
 def discover_recommendation():
 	json_data = {
-  "date": [
+  "discover": [
       
         {
           "name": "Errol Lim",

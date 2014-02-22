@@ -10,6 +10,7 @@ db = SQLAlchemy(app)
 
 mail = Mail(app)
 
-from views import general
+from views import general, search
 
 app.register_blueprint(general.mod)
+app.register_blueprint(search.mod, url_prefix='/search')
