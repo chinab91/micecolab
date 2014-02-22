@@ -65,17 +65,38 @@
     <div id="content">
         
 	<div id="panlm" class="panl">
-	<div id="meetingtab" class="row"><div class="col-xs-8"><h3 style="padding-left:5px;">My Meetings</h3></div><div class="col-xs-4 c"><h3><span class="glyphicon glyphicon-plus"></span></h3></div></div>
+	<div id="meetingtab" class="row"><div class="col-xs-9"><h4 style="padding-left:5px;">My Meetings</h4></div><div class="col-xs-3 c"><h4><span id="meetingtab1" class="glyphicon glyphicon-plus"></span></h4></div></div>
 	<div id="meetinglist" class="inactive"></div>
 	</div>
+	
+	<div id="panlr" class="panl">
+	<div class="row"><div class="col-xs-12"><h4 style="padding-left:15px;">Recommended for you to visit</h4></div></div>
+	<table style="width:100%;">
+	<tr>
+	  <td id="rec_1" colspan="2" style="height:100px;"><h4><span class="label label-success">Lamborghini</span></h4></td>
+	  </tr>
+	<tr>
+	  <td id="rec_2" rowspan="2" style="width:50%;height:150px;"><h4><span class="label label-success">Mercedes</span></h4></td>
+	  <td id="rec_3" style="width:50%;height:75px;"><p><span class="label label-success">Ferrari</span></p></td>		
+	</tr>
+	<tr>
+	  <td id="rec_4"><p><span class="label label-success">Maserati</span></p></td>		
+	</tr>
+	</table>
+	</div>
+	
+	<div id="panlr" class="panl">
+	<div class="row"><div class="col-xs-12"><h4 style="padding-left:15px;">Happening now..</h4></div></div>
+	</div>
         
-    </div>   
+    </div>
+	
     <div id="button">
 		<div class="headerimg row">
 		<div class="col-xs-2"><label for="handler-left" id="left" href="#"><img src="{{ url_for('static', filename='img/concierge.png') }}"></label></div>
 		<div class="col-xs-10">
 		<div class="input-group inputsearch">
-		  <input type="text" class="form-control">
+		  <input type="text" class="form-control" placeholder="Search exhibitors or interests..">
 		  <span class="input-group-btn">
 			<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
 		  </span>
