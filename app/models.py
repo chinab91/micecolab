@@ -8,10 +8,12 @@ class Exhibitor_Profile(db.Model):
     companyname = db.Column(db.String(100))
     position = db.Column(db.String(100))
     location = db.Column(db.String(100))
+    companyinfo = db.Column(db.Text)
 
-    def __init__(self, fullname, companyname, position, location):
+    def __init__(self, fullname, companyname, position, location, companyinfo):
     	self.fullname = fullname
     	self.companyname = companyname
     	self.position = position
     	self.location = location
+    	self.companyinfo = companyinfo
     
