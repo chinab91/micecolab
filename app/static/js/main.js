@@ -6,7 +6,7 @@ $(document).ready(function() {
 	  dataType: "json",
 	}).done(function(mm) {
 			$.each(mm.date, function( k, a ) {
-			  $('#meetinglist').append('<div class="mlfix row c"><div class="col-xs-12"><h4>'+a.value+'</h4></div></div>');
+			  $('#meetinglist').append('<div class="mlfix row c"><div class="col-xs-12"><b>'+a.value+'</b></div></div>');
 				$.each(a.meetings, function( k, b ) {
 					if (b.cell_status === 0) {
 					var aa=0.5;
@@ -20,10 +20,12 @@ $(document).ready(function() {
 	
 	$('#meetingtab').click(function() {
 		if ($('#meetinglist').hasClass('inactive') === true) {
+		$('#meetingtab1').addClass('glyphicon-minus').removeClass('glyphicon-plus');
 			$('#meetinglist').fadeIn(function() {
 				$('#meetinglist').removeClass('inactive');
 			});
 		} else {
+		$('#meetingtab1').addClass('glyphicon-plus').removeClass('glyphicon-minus');
 		$('#meetinglist').fadeOut(function() {
 				$('#meetinglist').addClass('inactive');
 			});
