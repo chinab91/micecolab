@@ -87,7 +87,6 @@ def get_meetings():
   ]
 }
 
-
 	return jsonify(json_date)
 
 def get_cell_status(year, month, date, hour, min, sec):
@@ -101,3 +100,52 @@ def get_cell_status(year, month, date, hour, min, sec):
 		return 1
 	else:
 		return 0
+
+@mod.route('/passcode_check/<passcode_string>')
+def check_passcode(passcode_string):
+	passcode_file = open('app/views/passcode.txt')
+	passcode = passcode_file.readline()
+	if passcode_string != passcode:
+		return 0 # pending retrun template
+	else:
+		return 1 # pending return template
+
+
+@mod.route('/discover')
+def discover_recommendation():
+	json_data = {
+  "date": [
+      
+        {
+          "name": "Errol Lim",
+          "position": "CMO",
+          "company": "Jublia",
+          "location": "Table 2"
+        },
+        {
+          "name": "Andriano",
+          "position": "Lead Dev",
+          "company": "eBay",
+          "location": "E34"
+        },
+        {
+          "name": "Andriano",
+          "position": "Lead Dev",
+          "company": "eBay",
+          "location": "E34"
+        },
+        {
+          "name": "Andriano",
+          "position": "Lead Dev",
+          "company": "eBay",
+          "location": "E34"
+        },
+        {
+          "name": "Andriano",
+          "position": "Lead Dev",
+          "company": "eBay",
+          "location": "E34"
+        }
+  ]
+}
+	return jsonify(json_data)
