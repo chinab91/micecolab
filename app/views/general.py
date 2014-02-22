@@ -1,5 +1,6 @@
 from flask import jsonify, Blueprint, render_template
 from app import db
+import datetime, time
 #from app.models import (Attendee_Login, Attendee_Profile, Attendee_Match, Event_Info, Timestamp_Lookout
 
 mod = Blueprint('general', __name__)
@@ -10,4 +11,93 @@ def index():
 
 @mod.route('/get_meetings')
 def get_meetings():
-	return 'get meetings';
+	json_date = {
+  "date": [
+    {
+      "value": "21 Feb 2014",
+      "meetings": [
+        {
+          "cell_status": get_cell_status(2014, 02, 21, 14, 00, 00),
+          "time": "2pm",
+          "name": "Errol Lim",
+          "position": "CMO",
+          "company": "Jublia",
+          "location": "Table 2"
+        },
+        {
+          "cell_status": get_cell_status(2014, 02, 21, 15, 00, 00),
+          "time": "3pm",
+          "name": "Andriano",
+          "position": "Lead Dev",
+          "company": "eBay",
+          "location": "E34"
+        }
+      ]
+    },
+    {
+      "value": "22 Feb 2014",
+      "meetings": [
+        {
+          "cell_status": get_cell_status(2014, 02, 22, 14, 00, 00),
+          "time": "2pm",
+          "name": "KY",
+          "position": "CEO",
+          "company": "Jublia",
+          "location": "Table 8"
+        },
+        {
+          "cell_status": get_cell_status(2014, 02, 22, 14, 00, 00),
+          "time": "2pm",
+          "name": "KY",
+          "position": "CEO",
+          "company": "Jublia",
+          "location": "Table 8"
+        },
+        {
+          "cell_status": get_cell_status(2014, 02, 22, 17, 16, 00),
+          "time": "6pm",
+          "name": "KY",
+          "position": "CEO",
+          "company": "Jublia",
+          "location": "Table 8"
+        }
+      ]
+    },
+    {
+      "value": "23 Feb 2014",
+      "meetings": [
+        {
+          "cell_status": get_cell_status(2014, 02, 23, 14, 00, 00),
+          "time": "2pm",
+          "name": "KY",
+          "position": "CEO",
+          "company": "Jublia",
+          "location": "Table 8"
+        },
+        {
+          "cell_status": get_cell_status(2014, 02, 23, 15, 00, 00),
+          "time": "3pm",
+          "name": "KY",
+          "position": "CEO",
+          "company": "Jublia",
+          "location": "Table 8"
+        }
+      ]
+    }
+  ]
+}
+
+
+	return jsonify(json_date)
+
+def get_cell_status(year, month, date, hour, min, sec):
+	dt = datetime.datetime(year, month, date, hour, min, sec)
+	unixts = time.mktime(dt.timetuple())
+
+	currentdt = datetime.datetime.now()
+	currentunixts = time.mktime(currentdt.timetuple())
+
+	if(unixts > currentunixts):
+		return 1
+	else:
+		return 0
