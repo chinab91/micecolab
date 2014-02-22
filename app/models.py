@@ -12,5 +12,12 @@ class Exhibitor_Profile(db.Model):
     position = db.Column(db.String(100))
     location = db.Column(db.String(100))
 
+    def __init__(self, fullname, companyname, position, location):
+    	self.fullname = fullname
+    	self.companyname = companyname
+    	self.position = position
+    	self.location = location
+    
+
 whooshalchemy.whoosh_index(app, Exhibitor_Profile)
 
