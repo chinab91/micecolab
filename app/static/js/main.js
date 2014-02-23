@@ -55,8 +55,8 @@ $(document).ready(function() {
 				  scrollTarget: '#panls'
 				});
 				$.each(mm.search, function( k, b ) {				
-					$('#st'+k+'').text('b.company');
-					$('#sp'+k+'').append('<div class="row"><h4 class="col-xs-12">'+b.company+'</h4></div><div class="row"><p class="col-xs-12">'+b.companyinfo+'<br/>Contact Person: '+b.name+'</p></div>');
+					$('#st'+k+'').text(''+b.company+'');
+					$('#sp'+k+'').empty().append('<div class="row"><h4 class="col-xs-12">'+b.company+'</h4></div><div class="row"><p class="col-xs-12">'+b.companyinfo+'<br/>Contact Person: '+b.name+'</p></div>');
 				//tofill
 				});
 			});
