@@ -38,7 +38,7 @@ def get_meetings():
           "name": "Stefano Lenzini",
           "position": "Lead Engineer",
           "company": "Ferrari",
-          "location": "Booth 101"
+          "location": "Booth B190"
         },
         {
           "cell_status": get_cell_status(2014, 02, 22, 14, 00, 00),
@@ -46,7 +46,7 @@ def get_meetings():
           "name": "Elogio Berardinelli",
           "position": "Lead Mechanic",
           "company": "Maserati",
-          "location": "Booth 110"
+          "location": "Booth C110"
         }
       ]
     },
@@ -58,16 +58,16 @@ def get_meetings():
           "time": "10:00 AM",
           "name": "Kamioka Hiroya",
           "position": "Purchasing Manager",
-          "company": "Honda",
-          "location": "Booth 118"
+          "company": "Honda Motor",
+          "location": "Booth B523"
         },
         {
           "cell_status": get_cell_status(2014, 02, 23, 16, 00, 00),
           "time": "04:00 PM",
           "name": "Harald Ecker",
           "position": "Assistant Manager",
-          "company": "Mercedez Benz",
-          "location": "Booth 121"
+          "company": "Mercedes Benz",
+          "location": "Booth A121"
         },
         {
           "cell_status": get_cell_status(2014, 02, 23, 17, 00, 00),
@@ -75,7 +75,7 @@ def get_meetings():
           "name": "Rene Wosnitza",
           "position": "Lead Engineer",
           "company": "BMW",
-          "location": "Booth 128"
+          "location": "Booth D128"
         }
       ]
     }
