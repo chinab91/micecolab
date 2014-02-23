@@ -175,3 +175,23 @@ def activity():
  ]
 }
   return jsonify(json_data)
+
+
+@mod.route('/bot')
+def bot():
+    return render_template('chat.html')
+
+
+@mod.route('/api', methods=['GET'])
+def api():
+    if request.environ.get('wsgi.websocket'):
+        ws = request.environ['wsgi.websocket']
+        #ws.send("Welcome to the app. How can I help you")
+        while True:
+            message = ws.receive()
+            if message == 'a':
+              ws.send("cats")
+            else:
+              ws.send("dogs")
+    return
+
