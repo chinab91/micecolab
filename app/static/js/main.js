@@ -55,7 +55,7 @@ $(document).ready(function() {
 				 $("#content").animate({ scrollTop: 2000 }, "slow");
 				$.each(mm.search, function( k, b ) {
 					$('#st'+k+'').text(''+b.companyname+'');
-					$('#sp'+k+'').empty().append('<div class="row"><h4 class="col-xs-12">'+b.companyname+'</h4></div><div class="row"><p class="col-xs-12">'+b.companyinfo+'<br/>Contact Person: '+b.fullname+', '+b.position+'</p></div><div id="sn'+k+'" class="row" style="height:200px;"><div class="col-xs-12"><img src="static/img/unnamed.png" style="width:200%;"></div></div>');
+					$('#sp'+k+'').empty().append('<div class="row"><h4 class="col-xs-12">'+b.companyname+', '+b.location+'</h4></div><div class="row"><p class="col-xs-12">'+b.companyinfo+'<br/>Contact Person: '+b.fullname+', '+b.position+'</p></div><div id="sn'+k+'" class="row" style="height:200px;"><div class="col-xs-12"><img src="static/img/unnamed.png" style="width:130%;"></div></div>');
 					//$('#sn'+k+'').kinetic();
 				});
 			});
