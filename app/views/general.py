@@ -30,52 +30,23 @@ def get_meetings():
     json_date = {
   "date": [
     {
-      "value": "21 Feb 2014",
-      "meetings": [
-        {
-          "cell_status": get_cell_status(2014, 02, 21, 14, 00, 00),
-          "time": "2pm",
-          "name": "Errol Lim",
-          "position": "CMO",
-          "company": "Jublia",
-          "location": "Table 2"
-        },
-        {
-          "cell_status": get_cell_status(2014, 02, 21, 15, 00, 00),
-          "time": "3pm",
-          "name": "Andriano",
-          "position": "Lead Dev",
-          "company": "eBay",
-          "location": "E34"
-        }
-      ]
-    },
-    {
       "value": "22 Feb 2014",
       "meetings": [
         {
           "cell_status": get_cell_status(2014, 02, 22, 14, 00, 00),
-          "time": "2pm",
-          "name": "KY",
-          "position": "CEO",
-          "company": "Jublia",
-          "location": "Table 8"
+          "time": "2:00 PM",
+          "name": "Stefano Lenzini",
+          "position": "Lead Engineer",
+          "company": "Ferrari",
+          "location": "Booth 101"
         },
         {
           "cell_status": get_cell_status(2014, 02, 22, 14, 00, 00),
-          "time": "2pm",
-          "name": "KY",
-          "position": "CEO",
-          "company": "Jublia",
-          "location": "Table 8"
-        },
-        {
-          "cell_status": get_cell_status(2014, 02, 22, 17, 16, 00),
-          "time": "6pm",
-          "name": "KY",
-          "position": "CEO",
-          "company": "Jublia",
-          "location": "Table 8"
+          "time": "3:00 PM",
+          "name": "Elogio Berardinelli",
+          "position": "Lead Mechanic",
+          "company": "Maserati",
+          "location": "Booth 110"
         }
       ]
     },
@@ -84,19 +55,27 @@ def get_meetings():
       "meetings": [
         {
           "cell_status": get_cell_status(2014, 02, 23, 14, 00, 00),
-          "time": "2pm",
-          "name": "KY",
-          "position": "CEO",
-          "company": "Jublia",
-          "location": "Table 8"
+          "time": "10:00 AM",
+          "name": "Kamioka Hiroya",
+          "position": "Purchasing Manager",
+          "company": "Honda",
+          "location": "Booth 118"
         },
         {
           "cell_status": get_cell_status(2014, 02, 23, 15, 00, 00),
-          "time": "3pm",
-          "name": "KY",
-          "position": "CEO",
-          "company": "Jublia",
-          "location": "Table 8"
+          "time": "11:00 AM",
+          "name": "Harald Ecker",
+          "position": "Assistant Manager",
+          "company": "Mercedez Benz",
+          "location": "Booth 121"
+        },
+        {
+          "cell_status": get_cell_status(2014, 02, 23, 15, 00, 00),
+          "time": "05:00 PM",
+          "name": "Rene Wosnitza",
+          "position": "Lead Engineer",
+          "company": "BMW",
+          "location": "Booth 128"
         }
       ]
     }
