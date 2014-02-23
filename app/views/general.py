@@ -62,15 +62,15 @@ def get_meetings():
           "location": "Booth 118"
         },
         {
-          "cell_status": get_cell_status(2014, 02, 23, 15, 00, 00),
-          "time": "11:00 AM",
+          "cell_status": get_cell_status(2014, 02, 23, 16, 00, 00),
+          "time": "04:00 PM",
           "name": "Harald Ecker",
           "position": "Assistant Manager",
           "company": "Mercedez Benz",
           "location": "Booth 121"
         },
         {
-          "cell_status": get_cell_status(2014, 02, 23, 15, 00, 00),
+          "cell_status": get_cell_status(2014, 02, 23, 17, 00, 00),
           "time": "05:00 PM",
           "name": "Rene Wosnitza",
           "position": "Lead Engineer",
